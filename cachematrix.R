@@ -19,7 +19,7 @@ makeCacheMatrix <- function(x = matrix()) {
         }
         ## The getter function of the matrix
         get <- function() x
-        ## The setter funcction of the inverse of the matrix
+        ## The setter function of the inverse of the matrix
         setinv <- function( invv ) inv <<- invv
         ## The getter function of the inverse of the matrix
         getinv <- function() inv
@@ -44,6 +44,6 @@ cacheSolve <- function(x, ...) {
         } ## Else get the data...
         data <- x$get()
         inv <- solve( data, ... ) ## ... compute its inverse ...
-        x$setinv( inv )      ## ... set the inverse in x's cache, and...
-        inv                  ## ... return the computed inverse.
+        x$setinv( inv )           ## ... set the inverse in x's cache, and...
+        inv                       ## ... return the computed inverse.
 }
